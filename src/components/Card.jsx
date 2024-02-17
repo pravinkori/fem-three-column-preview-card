@@ -6,12 +6,12 @@ import luxuryIcon from "../assets/images/icon-luxury.svg";
 
 function Card() {
   return (
-    <article className="card flex">
+    <article className="card">
       <section className="sedans">
-        <picture>
-          <img src={sedanIcon} alt="Sedan icon" />
-        </picture>
         <div className="card__content">
+          <picture>
+            <img src={sedanIcon} alt="Sedan icon" />
+          </picture>
           <h1 className="card__title">sedans</h1>
           <div className="card__description">
             <p>
@@ -23,10 +23,10 @@ function Card() {
         </div>
       </section>
       <section className="suvs">
-        <picture>
-          <img src={suvIcon} alt="Suv icon" />
-        </picture>
         <div className="card__content">
+          <picture>
+            <img src={suvIcon} alt="Suv icon" />
+          </picture>
           <h1 className="card__title">suvs</h1>
           <div className="card__description">
             <p>
@@ -38,10 +38,10 @@ function Card() {
         </div>
       </section>
       <section className="luxury">
-        <picture>
-          <img src={luxuryIcon} alt="luxury icon" />
-        </picture>
         <div className="card__content">
+          <picture>
+            <img src={luxuryIcon} alt="luxury icon" />
+          </picture>
           <h1 className="card__title">luxury</h1>
           <div className="card__description">
             <p>

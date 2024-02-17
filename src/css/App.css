@@ -9,7 +9,6 @@
   --ff-base: "Lexend Deca", sans-serif;
   --ff-accent: "Big Shoulders Display", sans-serif;
 
-  --fw-light: 300;
   --fw-regular: 400;
   --fw-semi-bold: 700;
 
@@ -18,24 +17,79 @@
   --fs-500: 1.125rem;
   --fs-600: 1.25rem;
   --fs-700: 1.5rem;
+  --fs-800: 2rem;
+  --fs-900: 3rem;
 }
 
 /* general styling */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   margin: 1.25rem;
+}
+
+.card {
+  --content-padding: 2rem;
+  --content-spacing: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-neutral-white);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  max-width: 375px;
+  border-radius: 1rem;
   overflow: hidden;
 }
 
-/* utilities */
-.flex {
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+.card__content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  gap: var(--content-spacing);
+  flex-wrap: nowrap;
+  padding: 3rem;
+}
+
+.card__title {
+  font-family: var(--ff-accent);
+  font-size: var(--fs-900);
+  text-transform: uppercase;
+  color: var(--clr-neutral-grey);
+}
+
+.sedans {
+  background-color: var(--clr-primary-orange);
+}
+
+.suvs {
+  background-color: var(--clr-primary-cyan);
+}
+
+.luxury {
+  background-color: var(--clr-primary-dark-cyan);
+}
+
+.button {
+  cursor: pointer;
+  color: var(--clr-primary-orange);
+  background-color: var(--clr-neutral-grey);
+  border: 2px solid var(--clr-neutral-white);
+  border-radius: 50rem;
+  padding: 0.75rem;
+
+  transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-primary-orange);
+  color: var(--clr-neutral-white);
+  border: 2px solid var(--clr-neutral-white);
 }
 
 .attribution {
