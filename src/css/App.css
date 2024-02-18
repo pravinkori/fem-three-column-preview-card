@@ -116,6 +116,7 @@ main {
 }
 
 .attribution {
+  font-family: var(--ff-base);
   font-size: 11px;
   text-align: center;
 }
