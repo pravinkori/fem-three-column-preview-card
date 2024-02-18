@@ -23,6 +23,8 @@
 
 /* general styling */
 body {
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 95%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +34,7 @@ main {
   margin: 4rem 2rem;
 }
 
+/* card styling */
 .card__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -72,6 +75,7 @@ main {
   padding-bottom: 1.75rem;
 }
 
+/* button styling */
 .btn {
   cursor: pointer;
   text-decoration: none;
@@ -100,7 +104,16 @@ main {
   border: 2px solid var(--clr-neutral-white);
 }
 
-/*
+/* media queries */
+@media (min-width: 1024px) {
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card__description {
+    padding-bottom: 4rem;
+  }
+}
 
 .attribution {
   font-size: 11px;
@@ -108,4 +121,4 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-} */
+}
