@@ -15,12 +15,12 @@
 }
 
 /*
-  3. Allow percentage-based heights in the application
+  3. Allow viewport-based heights in the application
 */
-/* html,
+html,
 body {
-  height: 100%;
-} */
+  min-height: 100vh;
+}
 
 /*
   Typographic tweaks!

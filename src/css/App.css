@@ -14,83 +14,93 @@
 
   --fs-300: 0.875rem;
   --fs-400: 1rem;
-  --fs-500: 1.125rem;
-  --fs-600: 1.25rem;
-  --fs-700: 1.5rem;
-  --fs-800: 2rem;
-  --fs-900: 3rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+  --fs-800: 3rem;
+  --fs-900: 3.5rem;
 }
 
 /* general styling */
 body {
-  display: grid;
-  place-content: center;
-  margin: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card {
-  --content-padding: 2rem;
-  --content-spacing: 1rem;
+main {
+  margin: 4rem 2rem;
+}
 
-  display: flex;
-  flex-direction: column;
-  color: var(--clr-neutral-white);
-  font-family: var(--ff-base);
-  font-weight: var(--fw-regular);
-  max-width: 375px;
+.card__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1024px;
   border-radius: 1rem;
   overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .card {
-    flex-direction: row;
-  }
+.card__sedan,
+.card__suv,
+.card__luxury {
+  padding: 2.5rem 3rem;
 }
 
-.card__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--content-spacing);
-  flex-wrap: nowrap;
-  padding: 3rem;
-}
-
-.card__title {
-  font-family: var(--ff-accent);
-  font-size: var(--fs-900);
-  text-transform: uppercase;
-  color: var(--clr-neutral-grey);
-}
-
-.sedans {
+.card__sedan {
   background-color: var(--clr-primary-orange);
 }
 
-.suvs {
+.card__suv {
   background-color: var(--clr-primary-cyan);
 }
 
-.luxury {
+.card__luxury {
   background-color: var(--clr-primary-dark-cyan);
 }
 
-.button {
+.card__title {
+  text-transform: uppercase;
+  color: var(--clr-neutral-grey);
+  font-family: var(--ff-accent);
+  font-size: var(--fs-700);
+}
+
+.card__description {
+  color: var(--clr-neutral-white);
+  font-family: var(--ff-base);
+  line-height: 1.75;
+  padding-bottom: 1.75rem;
+}
+
+.btn {
   cursor: pointer;
-  color: var(--clr-primary-orange);
+  text-decoration: none;
+  font-family: var(--ff-base);
   background-color: var(--clr-neutral-grey);
   border: 2px solid var(--clr-neutral-white);
   border-radius: 50rem;
-  padding: 0.75rem;
+  padding: 0.75rem 1.5rem;
 
-  transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+  transition: all 300ms ease-in-out;
 }
 
-.button:is(:hover, :focus) {
-  background-color: var(--clr-primary-orange);
+.card__sedan a {
+  color: var(--clr-primary-orange);
+}
+.card__suv a {
+  color: var(--clr-primary-cyan);
+}
+.card__luxury a {
+  color: var(--clr-primary-dark-cyan);
+}
+
+.btn:is(:hover, :focus) {
+  background-color: transparent;
   color: var(--clr-neutral-white);
   border: 2px solid var(--clr-neutral-white);
 }
+
+/*
 
 .attribution {
   font-size: 11px;
@@ -98,4 +108,4 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
+} */
