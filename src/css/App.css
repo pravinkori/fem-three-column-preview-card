@@ -114,12 +114,3 @@ main {
     padding-bottom: 4rem;
   }
 }
-
-.attribution {
-  font-family: var(--ff-base);
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
