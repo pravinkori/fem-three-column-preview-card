@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 function Card({ icon, title, description }) {
   return (
     <div className={`card__${title.toLowerCase()}`}>
