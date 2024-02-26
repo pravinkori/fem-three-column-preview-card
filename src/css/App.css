@@ -37,80 +37,8 @@ main {
 /* card styling */
 .card__container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   max-width: 1024px;
   border-radius: 1rem;
   overflow: hidden;
-}
-
-.card__sedan,
-.card__suv,
-.card__luxury {
-  padding: 2.5rem 3rem;
-}
-
-.card__sedan {
-  background-color: var(--clr-primary-orange);
-}
-
-.card__suv {
-  background-color: var(--clr-primary-cyan);
-}
-
-.card__luxury {
-  background-color: var(--clr-primary-dark-cyan);
-}
-
-.card__title {
-  text-transform: uppercase;
-  color: var(--clr-neutral-grey);
-  font-family: var(--ff-accent);
-  font-size: var(--fs-700);
-}
-
-.card__description {
-  color: var(--clr-neutral-white);
-  font-family: var(--ff-base);
-  line-height: 1.75;
-  padding-bottom: 1.75rem;
-}
-
-/* button styling */
-.btn {
-  cursor: pointer;
-  text-decoration: none;
-  font-family: var(--ff-base);
-  background-color: var(--clr-neutral-grey);
-  border: 2px solid var(--clr-neutral-white);
-  border-radius: 50rem;
-  padding: 0.75rem 1.5rem;
-
-  transition: all 300ms ease-in-out;
-}
-
-.card__sedan a {
-  color: var(--clr-primary-orange);
-}
-.card__suv a {
-  color: var(--clr-primary-cyan);
-}
-.card__luxury a {
-  color: var(--clr-primary-dark-cyan);
-}
-
-.btn:is(:hover, :focus) {
-  background-color: transparent;
-  color: var(--clr-neutral-white);
-  border: 2px solid var(--clr-neutral-white);
-}
-
-/* media queries */
-@media (min-width: 1024px) {
-  .card__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .card__description {
-    padding-bottom: 4rem;
-  }
 }
